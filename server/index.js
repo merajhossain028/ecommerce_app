@@ -13,6 +13,7 @@ const DB = 'mongodb+srv://meraj:meraj028@cluster0.0ntlpkk.mongodb.net/?retryWrit
 
 //middleware
 //CLIENT -> middlewear -> SERVER -> CLIENT
+app.use(express.json()); //middleware
 app.use(authRouter); //middleware
 
 //Connect to the database
