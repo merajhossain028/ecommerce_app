@@ -1,6 +1,6 @@
 const express = require('express');
 const User = require('../models/user');
-const bcrypt = require('bcryptjs');
+const bcryptjs = require('bcryptjs');
 
 const authRouter = express.Router();
 
@@ -25,7 +25,7 @@ authRouter.post('/api/signup', async function (req, res) {
             email,
             password: hashedPassword,
             name,
-        })
+        });
         user = await user.save(); // version, id
         res.json(user);
         //post that data in database
