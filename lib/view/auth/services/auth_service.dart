@@ -36,7 +36,8 @@ class AuthService {
           res: res,
           context: context,
           onSucess: () {
-            showSnackBar(context, 'Account Created');
+            showSnackBar(
+                context, 'Account Created! Login with the same credentials');
           });
       // print(res.statusCode);
     } catch (e) {
